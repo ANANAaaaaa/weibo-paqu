@@ -2,13 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 强制确保基础样式加载 */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f9fafb;
 }
+
+/* 确保 Tailwind 类被包含 */
+.bg-white { background-color: white !important; }
+.text-gray-900 { color: #111827 !important; }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important; }
+.rounded-lg { border-radius: 0.5rem !important; }
+.p-4 { padding: 1rem !important; }
+.mb-4 { margin-bottom: 1rem !important; }
+.flex { display: flex !important; }
+.items-center { align-items: center !important; }
+.justify-between { justify-content: space-between !important; }
+.gap-4 { gap: 1rem !important; }
 
 .waterfall-grid {
   column-count: 3;
